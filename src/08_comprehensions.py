@@ -28,10 +28,10 @@ print(y)
 
 a = ["foo", "bar", "baz"]
 
-y = []
-for i in a:
-    i.upper()
-    y.append(i)
+y = [i.upper() for i in a]
+# for i in a:
+#     i.upper()
+#     y.append(i)
 
 print(y)
 
