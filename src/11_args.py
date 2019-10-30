@@ -35,6 +35,7 @@ print(f2(numsum))  # Should print 22
 # arguments. Google "python default arguments" for a hint.
 
 # YOUR CODE HERE
+
 def f3(*args):
     if (len(args) == 2):
         return sum(args)

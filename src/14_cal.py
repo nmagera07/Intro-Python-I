@@ -22,3 +22,20 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--month", help="month", type=int)
+parser.add_argument("--year", help="year", type=int)
+
+args = parser.parse_args()
+
+m,y = args.month, args.year
+
+if (m is None) and (y is None):
+  m = datetime.now().month
+  y = datetime.now().year
+elif y is None:
+  y = datetime.now().year
+
+print(calendar.month(y,m))
